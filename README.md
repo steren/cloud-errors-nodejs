@@ -42,8 +42,8 @@ applications running in almost any environment. Here's an introductory video:
 	// Require the library and initialize the error handler
 	var errorHandler = require('@google/cloud-errors')({
 		projectId: 'my-project-id',
-		key: 'my-api-key',
-		serviceContext: {
+		key: 'my-api-key',	// not needed on Google Cloud Platform
+		serviceContext: {	// not needed on App Engine
 			service: 'my-service',
 			version: 'alpha1'
 		}
