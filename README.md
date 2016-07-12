@@ -53,33 +53,33 @@ applications running in almost any environment. Here's an introductory video:
 
 When initing the StackDriver Error reporting library you can specify several options
 
-```JS
-var errorHandler = require('@google/cloud-errors')({
-	projectId: 'my-project-id',
-	key: 'my-optional-api-key',
-	onUncaughtException: 'report',
-	serviceContext: {
-		service: 'my-service',
-		version: 'alpha1'
-	}
-});
-```
+	```JS
+	var errorHandler = require('@google/cloud-errors')({
+		projectId: 'my-project-id',
+		key: 'my-optional-api-key',
+		onUncaughtException: 'report',
+		serviceContext: {
+			service: 'my-service',
+			version: 'alpha1'
+		}
+	});
+	```
 
 Configure the error handling library to handle uncaught exceptions in serveral different ways:
 
-```JS
-{  // Ignore all uncaught errors, this is the default behavior
-	onUncaughtException: 'ignore'
-}
-
-{ // Report all uncaught errors and do not forcefully exit
-	onUncaughtException: 'report'
-}
-
-{ // Report any uncaught error and then attempt to exit after
-	onUncaughtException: 'reportAndExit'
-}
-```
+	```JS
+	{  // Ignore all uncaught errors, this is the default behavior
+		onUncaughtException: 'ignore'
+	}
+	
+	{ // Report all uncaught errors and do not forcefully exit
+		onUncaughtException: 'report'
+	}
+	
+	{ // Report any uncaught error and then attempt to exit after
+		onUncaughtException: 'reportAndExit'
+	}
+	```
 
 > All initialization arguments are optional but please be aware that to report errors to the service
 > one must specify a projectId either through the `GLCOUD_PROJECT` environment variable or through the
