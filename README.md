@@ -14,6 +14,8 @@ applications running in almost any environment. Here's an introductory video:
 
 * Your application will need to be using Node.JS version 0.12 or greater. Node.JS v5+ is recommended.
 
+* The module will only send errors when the `NODE_ENV` environment variable is set to `production`.
+
 ## Quickstart (Node.JS v4.x+)
 
 1. **Enable the Error Reporting API in your project:**
@@ -218,29 +220,6 @@ applications running in almost any environment. Here's an introductory video:
 		  console.log('%s listening at %s', server.name, server.url);
 		});
 	```
-
-## Developing Locally
-
-1. Specify you project-id and key either through environment variables or through the application interface:
-
-	* Via environment variables:
-
-		```bash
-			> export GLCOUD_PROJECT=<YOUR_PROJECT_ID>
-
-			> export GOOGLE_APPLICATION_CREDENTIALS=<path/to/your/keyfile.json>
-
-			> node myApp.js
-		```
-
-	* Via the javascript interface:
-
-		```JS
-		var errorHandler = require('@google/cloud-errors')({
-			projectId: 'your-project-id',
-			key: 'your-api-key'
-		});
-		```
 
 ## Developing the library
 
