@@ -49,35 +49,37 @@ applications running in almost any environment. Here's an introductory video:
 	);
 	```
 
-* **When initing the StackDriver Error reporting library you can specify several options**
+## Setup
 
-	```JS
-	var errorHandler = require('@google/cloud-errors')({
-		projectId: 'my-project-id',
-		key: 'my-optional-api-key',
-		onUncaughtException: 'report',
-		serviceContext: {
-			service: 'my-service',
-			version: 'alpha1'
-		}
-	});
-	```
+When initing the StackDriver Error reporting library you can specify several options
 
-* **Configure the error handling library to handle uncaught exceptions in serveral different ways:**
-
-	```JS
-	{  // Ignore all uncaught errors, this is the default behavior
-		onUncaughtException: 'ignore'
+```JS
+var errorHandler = require('@google/cloud-errors')({
+	projectId: 'my-project-id',
+	key: 'my-optional-api-key',
+	onUncaughtException: 'report',
+	serviceContext: {
+		service: 'my-service',
+		version: 'alpha1'
 	}
+});
+```
 
-	{ // Report all uncaught errors and do not forcefully exit
-		onUncaughtException: 'report'
-	}
+Configure the error handling library to handle uncaught exceptions in serveral different ways:
 
-	{ // Report any uncaught error and then attempt to exit after
-		onUncaughtException: 'reportAndExit'
-	}
-	```
+```JS
+{  // Ignore all uncaught errors, this is the default behavior
+	onUncaughtException: 'ignore'
+}
+
+{ // Report all uncaught errors and do not forcefully exit
+	onUncaughtException: 'report'
+}
+
+{ // Report any uncaught error and then attempt to exit after
+	onUncaughtException: 'reportAndExit'
+}
+```
 
 > All initialization arguments are optional but please be aware that to report errors to the service
 > one must specify a projectId either through the `GLCOUD_PROJECT` environment variable or through the
@@ -85,7 +87,7 @@ applications running in almost any environment. Here's an introductory video:
 > the Javascript interface or through the `GOOGLE_APPLICATION_CREDENTIALS` environment variable which
 > should contain a path to the keyfile while developing locally.
 
-* **Using Express?**
+### Using Express
 
 	```JS
 	var express = require('express');
@@ -123,7 +125,7 @@ applications running in almost any environment. Here's an introductory video:
 	);
 	```
 
-* **Or how about Hapi?**
+### Using Hapi
 
 	```JS
 	var hapi = require('hapi');
@@ -172,7 +174,7 @@ applications running in almost any environment. Here's an introductory video:
 	);
 	```
 
-* **Maybe Koa?**
+### Using Koa
 
 	```JS
 		var errorHandler = require('@google/cloud-errors')({
@@ -196,7 +198,7 @@ applications running in almost any environment. Here's an introductory video:
 		app.listen(3000);
 	```
 
-* **Perhaps Restify?**
+### Using Restify
 
 	```JS
 		function respond(req, res, next) {
