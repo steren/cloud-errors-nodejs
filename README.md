@@ -18,7 +18,7 @@ applications running in almost any environment. Here's an introductory video:
 
 1. **Enable the Error Reporting API for your project:**
 
-[Enable the Error Reporting API here](https://cloud.google.com/error-reporting/)
+[Enable the Error Reporting API here](https://console.cloud.google.com/apis/api/clouderrorreporting.googleapis.com/overview)
 
 2. **Create an API key:**
 
