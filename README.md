@@ -55,7 +55,7 @@ applications running in almost any environment. Here's an introductory video:
 
 5. **View reported errors:**
 
-  Open Stackdriver Error Reporting (https://console.cloud.google.com/errors) to view the reported errors. 
+  Open Stackdriver Error Reporting at https://console.cloud.google.com/errors to view the reported errors. 
 
 * **When initing the StackDriver Error reporting library you can specify several options**
 
