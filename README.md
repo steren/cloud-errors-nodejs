@@ -18,18 +18,18 @@ applications running in almost any environment. Here's an introductory video:
 
 1. **Enable the Error Reporting API for your project:**
 
-[Enable the Error Reporting API here](https://console.cloud.google.com/apis/api/clouderrorreporting.googleapis.com/overview)
+  [Enable the Error Reporting API here](https://console.cloud.google.com/apis/api/clouderrorreporting.googleapis.com/overview)
 
 2. **Create an API key:**
 
-(This authentication step is not needed if you run on Google Cloud Platform)
+  (This authentication step is not needed if you run on Google Cloud Platform)
 
-Follow [these instructions](https://support.google.com/cloud/answer/6158857?hl=en) to get an API key for your project.
+  Follow [these instructions](https://support.google.com/cloud/answer/6158857?hl=en) to get an API key for your project.
 
 
 3. **Install the module:**
 
-In your project, on the command line:
+  In your project, on the command line:
 
 	```shell
 	# Install through npm while saving to the local 'package.json'
@@ -55,7 +55,7 @@ In your project, on the command line:
 
 5. **View reported errors:**
 
-Open Stackdriver Error Reporting (https://console.cloud.google.com/errors) to view the reported errors. 
+  Open Stackdriver Error Reporting (https://console.cloud.google.com/errors) to view the reported errors. 
 
 * **When initing the StackDriver Error reporting library you can specify several options**
 
