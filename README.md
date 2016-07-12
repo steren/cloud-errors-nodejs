@@ -24,7 +24,7 @@ applications running in almost any environment. Here's an introductory video:
 
   (This authentication step is not needed if you run on Google Cloud Platform)
 
-  Follow [these instructions](https://support.google.com/cloud/answer/6158857?hl=en) to get an API key for your project.
+  Follow [these instructions](https://support.google.com/cloud/answer/6158857) to get an API key for your project.
 
 
 3. **Install the module:**
@@ -55,7 +55,7 @@ applications running in almost any environment. Here's an introductory video:
 
 5. **View reported errors:**
 
-  Open Stackdriver Error Reporting (https://console.cloud.google.com/errors) to view the reported errors. 
+  Open Stackdriver Error Reporting at https://console.cloud.google.com/errors to view the reported errors. 
 
 * **When initing the Stackdriver Error reporting library you can specify several options**
 
