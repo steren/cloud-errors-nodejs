@@ -43,7 +43,7 @@ applications running in almost any environment. Here's an introductory video:
 	var errorHandler = require('@google/cloud-errors')({
 		projectId: 'my-project-id',	// not needed on Google Cloud Platform
 		key: 'my-api-key',		// not needed on Google Cloud Platform
-		serviceContext: {		// not needed on App Engine
+		serviceContext: {		// not needed on Google App Engine
 			service: 'my-service',
 			version: 'alpha1'
 		}
